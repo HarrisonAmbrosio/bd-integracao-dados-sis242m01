@@ -1,6 +1,6 @@
 # Equipes
 
-Lista dos alunos e duplas, montada a partir dos forks (atualizada em 17/11/2026, 17h40). O trabalho pode ser **individual ou em dupla**. Cada um preenche a tabela Equipe no README **do próprio fork**. Na dupla, só **um integrante** faz o fork; o outro entra como colaborador.
+Lista dos alunos e duplas, montada a partir dos forks (atualizada em 19/11/2026, 17h40). O trabalho pode ser **individual ou em dupla**. Cada um preenche a tabela Equipe no README **do próprio fork**. Na dupla, só **um integrante** faz o fork; o outro entra como colaborador.
 
 | Formato / dupla | Integrantes (usuário do GitHub) | Fork | Situação |
 | --- | --- | --- | --- |
@@ -12,3 +12,4 @@ Lista dos alunos e duplas, montada a partir dos forks (atualizada em 17/11/2026,
 | Dupla | Sophia Guedes Alves (sophiaguedess), Rayssa Ramos de Sá | [sophiaguedess/bd-integracao-dados-sis242m01](https://github.com/sophiaguedess/bd-integracao-dados-sis242m01) | Nomes só no campo "Nome da dupla"; falta preencher a tabela |
 | Dupla | Carlos Alencar (xandealencar-S, 2400784), Carlos Vasconcelos (Carlos-VasconceloS, 2385765) | [xandealencar-S/bd-integracao-dados-sis242m01](https://github.com/xandealencar-S/bd-integracao-dados-sis242m01) | Tabela preenchida; Pull Request #2 aberto (só com a tabela, trabalho ainda não começou) |
 | Dupla | Bruna Isabelle Nunes Muro (brunaisabellye-cloud, 2527820), Emilly Melissa (2532310) | [brunaisabellye-cloud/bd-integracao-dados-sis242m01](https://github.com/brunaisabellye-cloud/bd-integracao-dados-sis242m01) | Trabalho começou (`sql/01_ddl_postgres.sql`); usuário da Bruna e marcador de conflito do README corrigidos; ⚠️ no lugar do usuário do GitHub da Emilly está um e-mail (os commits dela aparecem como EmillyMelissa); ⚠️ "Nome da dupla" traz só o nome da Bruna; sem Pull Request |
+| a preencher | julyaneric8 (dono do fork) | [julyaneric8/bd-integracao-dados-sis242m01](https://github.com/julyaneric8/bd-integracao-dados-sis242m01) | Fork criado em 19/11; falta preencher a tabela Equipe |
