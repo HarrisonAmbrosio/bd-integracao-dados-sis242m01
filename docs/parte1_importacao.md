@@ -112,14 +112,36 @@ O script original foi executado contra o DDL já corrigido (só a conexão foi t
 
 ## Tratamentos aplicados aos dados
 
-(conversão de tipos, validações, normalizações)
+- **Leitura só do que tem cabeçalho.** As colunas M a W de pedido_compra (sem cabeçalho) são detectadas e **não importadas**, com aviso. Sete das nove linhas coincidem exatamente com os pedidos 12 a 18; as outras duas (P19 e P20) trazem ordem_compra 19 e 20, onde os pedidos normais têm 0. Só o cliente pode dizer qual é o dado correto (Parte 4).
+- **Conversão de tipos.** Datas para DATE; identificadores para inteiro (o script recusa um "3,5" onde se espera um inteiro); quantidades para DOUBLE/float8; valores monetários para numeric(12,4); textos com espaços das pontas removidos.
+- **Normalização do fornecedor.** F8 vira 8 em fornecedor e em produtos_filial, para ser numérico e poder se relacionar com pedido_compra.fornecedor_id. A coluna idproduto da planilha vira produto_id no banco.
+- **Coluna calculada.** qtde_pendente não existe na planilha; é calculada como qtde_pedida - qtde_entregue.
+- **Nada de preencher valor ausente com 0.** Valor ausente fica NULL e o banco aplica as regras (NOT NULL, PK, chaves estrangeiras). Cada linha rejeitada é relatada com o número da linha do Excel e o motivo.
+- **Ordem de carga.** fornecedor, produtos_filial, pedido_compra, entradas_mercadoria, venda, para respeitar as chaves estrangeiras.
+- **O que NÃO foi alterado.** Os problemas de negócio dos dados (venda de produto sem cadastro, ordem_compra = 0, quantidades e preços que não batem entre as abas) foram **mantidos como vieram** e documentados na Parte 4. Apagar ou "consertar" esses valores sem o cliente seria inventar dado. É também por isso que venda não tem chave estrangeira para produtos_filial.
 
 ## Conferência final
 
 | Tabela | Linhas na planilha | Linhas no banco |
 | --- | --- | --- |
-| fornecedor |  |  |
-| produtos_filial |  |  |
-| pedido_compra |  |  |
-| entradas_mercadoria |  |  |
-| venda |  |  |
+| fornecedor | 20 | 20 |
+| produtos_filial | 20 | 20 |
+| pedido_compra | 29 | 29 |
+| entradas_mercadoria | 20 | 20 |
+| venda | 33 | 33 |
+
+Além da contagem, o conteúdo foi comparado valor a valor com a planilha (1.025 células nas 5 tabelas, 0 diferenças). Saída final do `importar.py`:
+
+```
+CONFERENCIA FINAL (planilha x banco)
+tabela                 planilha  inseridas  rejeitadas  no banco  situação
+fornecedor                   20         20           0        20  OK
+produtos_filial              20         20           0        20  OK
+pedido_compra                29         29           0        29  OK
+entradas_mercadoria          20         20           0        20  OK
+venda                        33         33           0        33  OK
+
+Importação concluída: todas as linhas da planilha estão no banco.
+```
+
+O aviso sobre as 99 células sem cabeçalho aparece antes dessa tabela, durante a importação de pedido_compra.
