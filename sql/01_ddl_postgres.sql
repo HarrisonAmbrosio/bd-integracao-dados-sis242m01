@@ -1,4 +1,5 @@
 -- DDL corrigido para PostgreSQL
+-- Nome: Mikael Coelho Ramos e Kauã Monteiro Coelho
 
 CREATE TABLE public.fornecedor (
     idfornecedor int4 NOT NULL,

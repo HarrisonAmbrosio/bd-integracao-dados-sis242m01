@@ -1,4 +1,5 @@
 -- DDL corrigido para MySQL
+-- Nome: Mikael Coelho Ramos e Kauã Monteiro Coelho
 
 CREATE TABLE fornecedor (
     idfornecedor INT NOT NULL AUTO_INCREMENT,
