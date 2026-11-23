@@ -3,14 +3,13 @@
 
 -- 1 - Concatenar produto_id e descrição, "onde houver", no formato "12345 - Detergente"
 
--- 1a) pedido_compra (tem descricao_produto)
+-- 1a) pedido_compra 
 SELECT p.pedido_id,
        CONCAT_WS(' - ', p.produto_id, NULLIF(TRIM(p.descricao_produto), '')) AS produto
 FROM pedido_compra p
 ORDER BY p.pedido_id;
 
--- 1b) venda (a tabela não tem descrição: ela vem de produtos_filial; LEFT JOIN porque P21 a P28 não têm
---     cadastro e, nesses casos, o resultado é só o id - exatamente o "onde houver" do enunciado)
+-- 1b) venda 
 
 SELECT v.venda_id,
        CONCAT_WS(' - ', v.produto_id, NULLIF(TRIM(d.descricao), '')) AS produto
@@ -46,4 +45,15 @@ SELECT e.nro_nfe,
        TO_CHAR(e.data_entrada, 'DD/MM/YYYY') AS data_entrada     
 FROM entradas_mercadoria e
 ORDER BY e.data_entrada, e.nro_nfe;
+
+--  3 - Só os produtos requisitados mais de 10 vezes no período
+
+SELECT produto_id, COUNT(*) AS vezes_requisitado
+FROM pedido_compra
+WHERE data_pedido BETWEEN DATE '2025-01-01' AND DATE '2025-03-31'
+GROUP BY produto_id
+HAVING COUNT(*) > 10;
+
+
+
 
