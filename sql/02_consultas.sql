@@ -1,4 +1,4 @@
--- 02_consultas  |  PDF, Parte 2 - Consultas SQL Básicas  |  README, Etapa 2 (somente SQL)
+-- 02_consultas  
 -- Nome: Mikael Coelho Ramos e Kauã Monteiro Coelho
 
 -- CONSULTA 1 - Consumo por produto e mês
