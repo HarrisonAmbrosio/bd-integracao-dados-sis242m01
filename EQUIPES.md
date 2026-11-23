@@ -4,7 +4,7 @@ Lista dos alunos e duplas, montada a partir dos forks (atualizada em 23/11/2026,
 
 | Formato / dupla | Integrantes (usuário do GitHub) | Fork | Situação |
 
-| Dupla | Fernando Filho (Nanduou, 2536250), Harrison Ambrozio (HarrisonAmbrosio, 2534655) | HarrisonAmbrosio/bd-integracao-dados-sis242m01 | Fork criado |
+| Dupla | Fernando Filho (Nanduou, 2536250), Harrison Ambrozio (HarrisonAmbrosio, 2534655) | [HarrisonAmbrosio/bd-integracao-dados-sis242m01](https://github.com/HarrisonAmbrosio/bd-integracao-dados-sis242m01) | Fork criado |
 | Individual | Izabelly Cantalice Ribeiro Ayder Soares (IzabellyCantalice) | [IzabellyCantalice/bd-integracao-dados-sis242m01](https://github.com/IzabellyCantalice/bd-integracao-dados-sis242m01) | Pull Request #1 aberto |
 | Dupla | Mikael Coelho Ramos (mikaelrms, 2388326), Kauã Monteiro Coelho (Kauaks, 2533406) | [mikaelrms/bd-integracao-dados-sis242m01](https://github.com/mikaelrms/bd-integracao-dados-sis242m01) | Tabela preenchida; Pull Request #3 com a Parte 1 (DDLs, importar.py e `docs/parte1_importacao.md`) em 20/11; faltam as Partes 2, 3 e 4; ⚠️ todos os commits são do Mikael, Kauã ainda sem commits |
 | Dupla | Carlos Alexandre Dias Messias de Lima (Alexandrediasss, 2423449), Maria Luiza Oliveira Teodoro (MariaLuiza007-Teo, 2538557) | [Alexandrediasss/bd-integracao-dados-sis242m01](https://github.com/Alexandrediasss/bd-integracao-dados-sis242m01) | Tabela preenchida; Pull Request #4 aberto em 21/11 com todas as partes (checklist completo, os dois com pelo menos 3 commits) |
