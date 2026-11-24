@@ -1,4 +1,4 @@
-
+import os
 import pandas as pd
 import psycopg2
 from datetime import datetime, timedelta
@@ -10,7 +10,7 @@ DB = {
     "port": 5432,
     "database": "integracao_dados",
     "user": "postgres",
-    "password": "12345"
+    "password": os.getenv("DB_PASSWORD", "12345")
 }
 
 
