@@ -1,5 +1,5 @@
 -- DDL corrigido para MySQL
--- eu fiz esse
+
 CREATE TABLE venda (
     venda_id BIGINT NOT NULL,
     data_emissao DATE NOT NULL,
