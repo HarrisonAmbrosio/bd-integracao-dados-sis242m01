@@ -1,3 +1,4 @@
+
 -- 1. Consumo por produto em fevereiro de 2025
 
 SELECT
@@ -11,7 +12,6 @@ GROUP BY produto_id
 ORDER BY produto_id;
 
 -- Produtos requisitados, mas ainda não totalmente recebidos
-
 SELECT
     p.ordem_compra,
     p.produto_id,

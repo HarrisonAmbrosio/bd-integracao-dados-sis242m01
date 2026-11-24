@@ -1,3 +1,4 @@
+
 CREATE TABLE public.venda (
     venda_id BIGINT NOT NULL,
     data_emissao DATE NOT NULL,
@@ -67,3 +68,5 @@ CREATE TABLE public.fornecedor (
 
     CONSTRAINT fornecedor_pkey PRIMARY KEY (idfornecedor)
 );
+
+
